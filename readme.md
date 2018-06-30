@@ -1,13 +1,13 @@
-# Sample Create Scenes (nodejs)
+# Sample Create Scenes (Node.js)
 
-This sample demonstrates API call to create a Scene into your ARTIK cloud services account.   
+This sample demonstrates an API call to create a Scene in your ARTIK cloud services account.   
 
 **Prerequisites**
 
-1. Node and Npm
+1. Node and npm
 
 * Node version >= 9.8.0
-* Npm version >= 5.8.1
+* npm version >= 5.8.1
 
 Check your version by typing:
 
@@ -18,18 +18,18 @@ v9.8.0
 v5.8.1
 ```
 
-2. You should be familiar with ARTIK cloud services to create an application, device types, and adding devices into your account.
+2. You should be familiar with how to create an application, create device types, and add devices to your ARTIK cloud services account.
 
 ### Setup / Installation
 
-1. Create a Device Type (or existing one) which has defined the "setOn" and "setOff" actions.
-2. Add 2 device instances (of above Device Type) and note down the "device Id" from [Device Dashboard](https://my.artik.cloud/devices).
-3. [Create an Application](https://developer.artik.cloud/documentation/user-management/authentication.html) (or existing one).  Be sure your application set "Read and Write" permissions to add a special device type Scene with the unique name: cloud.artik.scene.    This will enable the Scenes API to work.    Additionally, be sure your application has added and set "Read and Write" permissions for your Device Type from step #1.   
-4. Login to your newly created application and note down the "user token".
+1. Create a device type (or find an existing one) which has defined the `setOn` and `setOff` Actions.
+2. Add 2 device instances (of above device type) and note the "device ID" from the [Devices dashboard](https://my.artik.cloud/devices).
+3. [Create an application](https://developer.artik.cloud/documentation/user-management/authentication.html) (or use an existing one). Be sure your application has set "Read and Write" permissions on a special device type named "Scene" with the unique name: cloud.artik.scene. This will enable the Scenes API to work. Additionally, be sure your application has added and set "Read and Write" permissions on your device type from Step 1.   
+4. Login to your newly created application and note the "user token".
 
 ### **Code setup**
 
-1. Edit the `config.json` and add your "user token" and the 2 device Ids retrieved earlier.   
+1. Edit the `config.json` and add your "user token" and the 2 device IDs retrieved earlier.   
 
 ```javascript
 {
@@ -39,7 +39,7 @@ v5.8.1
 }
 ```
 
-2. Simply examine the top of the`create-scene.json`file and note that 2 scenes will be created.   One for turning on all the lights and one for turning off all the lights.  
+2. Simply examine the top of the`create-scene.json`file and note that 2 Scenes will be created: one for turning on all the lights, and one for turning off all the lights.  
 
 ```javascript
 //when scene activiated, will call "setOn" on each of the devices.
@@ -87,7 +87,7 @@ var scene_off = {
 
 ###Run sample  
 
-Run the script via command line to create 2 scenes into your account.
+Run the script via command line to create 2 Scenes in your account.
 
 ```
 %> node create_scene.js
@@ -147,11 +147,11 @@ Response data of API calls are shown below ...
 }
 ```
 
-### 2. View the Scene in your Account   
+### 2. View the Scene in your account   
 
-You can verify the scene is added to the account by visiting the [Scenes dashboard](https://my.artik.cloud/scenes).    ![screenshot](./screenshots/screenshot1.png)
+You can verify the Scene is added to your account by visiting the [Scenes dashboard](https://my.artik.cloud/scenes).    ![screenshot](./screenshots/screenshot1.png)
 
-The `list_scenes.js` file is also available to list all the scenes in your account
+The `list_scenes.js` file is also available to list all the Scenes in your account.
 
 ```
 %> node list-scenes.js
@@ -166,7 +166,7 @@ If you are not familiar with ARTIK cloud services, we have extensive documentati
 
 The full ARTIK cloud services API specification can be found at https://developer.artik.cloud/documentation/api-reference/
 
-Peek into advanced sample applications at https://developer.artik.cloud/documentation/tutorials/code-samples/
+Check out advanced sample applications at https://developer.artik.cloud/documentation/tutorials/code-samples/
 
 To create and manage your services and devices on ARTIK cloud services, visit the Developer Dashboard at https://developer.artik.cloud
 
