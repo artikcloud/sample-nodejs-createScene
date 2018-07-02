@@ -65,6 +65,20 @@ function create_scene(scene_data) {
 
 }
 
+/**
+* helper function to handle the api response
+*/
+
+function handle_response(error, response, body) {
+  if(error) throw new Error(error);
+
+  try {
+    console.log("\n", JSON.stringify(body));
+  } catch(e) {
+    console.log("\n> ", e);
+  }
+}
+
 console.log("\nVisit https://my.artik.cloud/scenes after scenes are created") 
 
 console.log("\n1. Creating Scene 1: ", scene_on.name)
